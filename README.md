@@ -1,3 +1,3 @@
-# LOC - Localisation System (Position Tracking)
+# IPS - Indoor Positioning System
 
-![Alt text](LOC.png?raw=true "LOC Logo")
+![Alt text](IPS.png?raw=true "IPS Logo")
