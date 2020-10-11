@@ -1,0 +1,118 @@
+@font-face{
+	font-family: cicle;
+	src: url('../fonts/Cicle_Semi.ttf');
+}
+body{ 
+    margin: 0; 
+    padding:0;
+    background-color:rgb(60,60,60);
+    color:white;
+    font-family: cicle;
+}
+
+.DisplayCanvas{ 
+    height:80%;
+    padding:0;
+    margin-top:1%;
+    float:left;
+    position:relative;
+    border: 2px solid rgb(184,158,64); 
+    background-color:rgb(52,52,52);
+}
+#sidebar{
+    height:100%;
+}
+
+tr{
+	border:1px solid rgb(60,60,60);
+
+}
+
+td{
+    margin:1px;
+	border:1px solid rgb(60,60,60);
+	text-align: center;
+	height:50px;
+    background-color: rgb(52,52,52); /* Black */;
+}
+td:hover{
+	border:1px solid rgb(184,158,64);
+    background-color: rgb(0,76,112); /* Blue */;
+	color:rgb(184,158,64);
+}
+#data_table{
+    width:100%;
+    table-layout:fixed;
+}
+
+/*
+	Forms & Inputs
+	*/
+	.Section_Settings_Form{
+		background-color:rgb(52,52,52);
+		padding:10px;
+		padding-bottom:5px;;
+		font-family:cicle;
+		font-size:15px;
+		text-align:left;
+		margin:0;
+	}
+	.ControlForms{
+		padding:10px;
+		padding-top:0;
+		padding-bottom:5px;;
+		font-family:cicle;
+		text-align:center;
+		margin:0;
+	}
+	.Input_Apply_Large{
+		height:30px;
+		margin-bottom:5px;
+	}
+	.Fire_Apply{
+		background-color:rgb(228,227,225);
+		border: 2px solid rgb(184,158,64);
+		color:rgb(184,158,64);
+		cursor:pointer;
+		cursor:pointer;
+		height:30px;
+		font-family:cicle;
+		font-size:15px;
+	}
+	.Button_Apply{
+		background-color:rgb(228,227,225);
+		border: 2px solid rgb(0,76,112);
+		color:rgb(0,76,112);
+		cursor:pointer;
+		height:30px;
+		font-family:cicle;
+		font-size:15px;
+	}
+	.Button_Apply:hover{
+		background-color:rgb(60,60,60);
+		border: 2px solid rgb(184,158,64);
+		color:rgb(184,158,64);
+		cursor:pointer;
+	}
+	.Input_Apply{
+		height:30px;
+		border: 2px solid rgb(0,76,112);
+		background-color:rgb(255,255,255);
+		color:rgb(0,76,112);
+		font-family:cicle;
+		font-size:15px;
+		padding:0;
+		padding-left: 10px;
+		
+		z-index: 10;
+	}
+	.Selector_Apply{
+		height:30px;
+		border: 2px solid rgb(0,76,112);
+		background-color:rgb(255,255,255);
+		color:rgb(0,76,112);
+		font-family:cicle;
+		font-size:15px;
+		padding:0;
+		padding-left: 10px;
+	}

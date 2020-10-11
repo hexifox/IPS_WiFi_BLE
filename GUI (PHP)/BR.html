@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>LOC</title>
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="css/loc.css">
+        <script src="http://code.jquery.com/qunit/qunit-1.11.0.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+	<body>
+        <div id="sidebar">
+            <h1>Info</h1>
+            <div id='data_info'></div>
+            <h1>Distance</h1>
+            <div id='data_distance'></div>
+            <h1>Radius</h1>
+            <div id='data_radius'></div>
+            <h1>Points</h1>
+            <div id='data_points'></div>
+        </div>
+        <div id="threedcanvas"></div>
+		<script src="js/Three.js"></script>
+        <script src="js/OrbitControls.js"></script>
+        <script src="js/circle-intersection.js"></script>
+		<script src="js/loc.js"></script>
+        <script>        
+            //Plot the 5 grids (2/sides + 1 bottom) 
+             
+            plotGrid(5,0,5,10,50,0,0,0);
+            plotGrid(5,0,15,10,50,0,0,0);
+            //Side
+            plotGrid(10,2.5,2.5,5,25,0,0,1);
+            plotGrid(10,2.5,7.5,5,25,0,0,1);
+            plotGrid(10,2.5,12.5,5,25,0,0,1);
+            plotGrid(10,2.5,17.5,5,25,0,0,1);
+            //Back
+            plotGrid(7.5,2.5,20,5,25,1,0,0);
+            plotGrid(2.5,2.5,20,5,25,1,0,0);
+    
+            //Beacons Position
+            B1 = [9.5, 0.3, 1.5];
+            B2 = [0.5, 0.3,  1.5];
+            B3 = [0.5, 0.3,  17.5];
+
+            start();
+            var render = function () {
+                requestAnimationFrame(render);
+                renderer.render(scene, camera);
+            };
+            render();
+            update();
+        </script>
+	</body>
+</html>

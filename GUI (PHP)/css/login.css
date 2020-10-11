@@ -1,0 +1,110 @@
+@font-face{
+	font-family: cicle;
+	src: url('../fonts/Cicle_Semi.ttf');
+}
+html{
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	font-family:Verdana;
+}
+body{
+	height:100%;
+	width:100%;
+	margin: 0;
+	background-color:rgb(52,52,52);
+	color:rgb(228,227,225);
+	text-align:center;
+	font-family: cicle;
+	font-size:75px;
+}
+#header{
+	background-color:rgb(60,60,60);
+	padding:0.5%;
+	height:14%;
+	width:99%;
+	border-bottom: 2px solid rgb(184,158,64);
+}
+#HoursMinutes{
+	margin-top:0;
+	right:4%;
+	position: absolute;
+	text-align:right;
+	font-size:70px;
+}
+#DayMonth{
+	margin-top:4%;
+	right:4%;
+	position: absolute;
+	text-align:right;
+	font-size: 40px;
+}
+#OAS_Logo{
+	margin-top:2%;
+	width:25%;
+	margin-left:37.5%;
+	left:0;
+	position:absolute;
+}
+#SA_Logo{
+	margin-top:2%;
+	top:0;
+	left:2%;
+	width:20%;
+	position:absolute;
+}
+form{
+	width:50%;
+	height:35%;
+	padding-top:5%;
+	margin-top:5%;
+	margin-left:25%;
+	background-color:rgb(60,60,60);
+	border: 2px solid rgb(184,158,64);
+}
+.Login_Logos{
+	width:40px;
+	padding:5px;
+	border-radius: 50%;
+	border:1px solid white;
+	float:left;
+	margin-right:10px;
+}
+.Inputs{
+	height:40px;
+	width:150px;
+	background-color:rgb(255,255,255);
+	border: 2px solid rgb(184,158,64);
+	color:rgb(0,76,112);
+	font-size:25px;
+	padding:0;
+	padding-left: 10px;
+	margin-top:5px;
+	float:left;
+}
+.Ins{
+	width:230px;
+	height:60px;
+	margin:0 auto;
+	text-align:center;
+	position:relative;
+}
+#Input{
+	width:150px;
+	height:35px;
+	background-color:rgb(228,227,225);
+	border: 2px solid rgb(0,76,112);
+	border-radius: 15px;
+	color:rgb(0,76,112);
+	cursor:pointer;
+	font-family:cicle;
+	font-size:25px;
+	margin-top:5px;
+}
+#Input:hover{
+	background-color:rgb(60,60,60);
+	border: 2px solid rgb(184,158,64);
+	color:rgb(184,158,64);
+	cursor:pointer;
+}

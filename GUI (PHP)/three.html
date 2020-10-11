@@ -1,0 +1,254 @@
+<html>
+	<head>
+		<title>LOC</title>
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="css/loc.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="http://code.jquery.com/qunit/qunit-1.11.0.js"></script>
+	    <script type="text/javascript" src="https://dl.dropboxusercontent.com/u/1131693/bloodrop/sylvester.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+	<body  onload='load()'>
+        
+	<!-- Loading Image -->
+	<div img id="loading"></div>
+	<img id="Loading_Image" src='img/favicon.png'></img>
+	<!-- Nav Container-->
+	<div class="row sidenav" id="Nav_Portfolio">
+  		<div class="row">
+			<div class="row">
+				<div class="col-12 title">
+					<h1>Products<a href="javascript:void(0)" class="closebtn" onclick="closePortfolioNav()">&times;</a></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 contPNG">
+					<h2 class="middle">OAC <br><p> Occupancy Analysis & Control</p></h2>
+					<img src="img/OAC.png" class='col-12 prevPNG'>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 contPNG">
+					<h2 class="middle">AGD <br><p> Access Guidance Display</p></h2>
+					<img src="img/AGD.png" class='col-12 prevPNG'>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 title">
+					<h1>Projects</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 contPNG">
+					<h2 class="middle">LOC <br><p> Indoor Tracking & Localisation</p></h2>
+					<img src="img/LOC.png" class='col-12 prevPNG'>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 contPNG">
+					<h2 class="middle">ACT <br><p>Activity Monitoring System</p></h2>
+					<img src="img/act.png" class='col-12 prevPNG'>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 contPNG">
+					<h2 class="middle">SYS <br><p> Real-time Monitoring Platform</p></h2>
+					<img src="img/sys.png" class='col-12 prevPNG'>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 contPNG">
+					<h2 class="middle">HBM <br><p> Heart Beat Monitoring</p></h2>
+					<img src="img/hbm.png" class='col-12 prevPNG'>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 title">
+					<a href="index.html"><h1>Access</h1></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row sidenav" id="Nav_Main">
+		<div class="row">
+			<div class="row">
+				<div class="col-12 title">
+					<h1>Pages<a href="javascript:void(0)" class="closebtn" onclick="closeMainNav()">&times;</a></h1>
+					<div class="row Section_Separator"></div>
+					<ul class="Nav_List">
+						<li onclick="openPortfolioNav()">Portfolio</li>
+						<li><a href="status.html">Status</a></li>
+						<li><a href="sales.html">Sales</a></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Main Container-->
+	<div id="Nav_Container">
+		<div class="row Section_Header">
+			<div class="col-1">
+				<h1 style="cursor:pointer" onclick="openMainNav()">&#9776; Menu</h1></div>
+			<div class="col-2">
+				<div class="col-2">
+					<img src="icons/user.png" id="User_Logo">
+				</div>
+				<div class="col-10" id="User_Section">
+					<p>	Welcome, <i><?php echo $login_session; ?></i></p><br>
+					<p>Last Login: <i><?php echo $_SESSION['LastConn']; ?></i></p><br>
+					<a href="require/logout.php">Log Out</a>
+				</div>
+			</div>
+			<div class="col-2"></div>
+			<div class="col-2" id="OAS_Logo">
+				<img src="img/Omega.png" class='col-12'>
+			</div>
+			<div class="col-2"></div>
+			<div class="col-2">
+				<img src="icons/facebook.png" class="icons"></img>
+				<img src="icons/insta.png" class="icons"></img>
+				<img src="icons/google.png" class="icons"></img>
+				<img src="icons/youtube.png" class="icons"></img>
+				<img src="icons/linkedin.png" class="icons"></img>
+				<img src="icons/github.png" class="icons"></img>
+				<img src="icons/twitter.png" class="icons"></img>
+			</div>
+			<div class="col-1">
+				<div id="clock_HM"></div>
+			</div>
+		</div>
+        <div class="row">
+            <div id="sidebar" class="col-2">
+                <table id="data_table">
+                    <colgroup>
+                        <col width="20%"/>
+                        <col width="20%"/>
+                        <col width="20%"/>
+                        <col width="20%"/>
+                    </colgroup>
+                    <tr>
+                        <td colspan="4"><h1>Info</h1></td>
+                    </tr>
+                    <tr>
+                        <td><h2></h2></td>
+                        <td><h2>B1</h2></td>
+                        <td><h2>B2</h2></td>
+                        <td><h2>B3</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>RSSI</h2></td>
+                        <td id='data_1'></td>
+                        <td id='data_2'></td>
+                        <td id='data_3'></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><h1>Points (3D)</h1></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h2>X</h2></td>
+                        <td colspan="2"><h2>Y</h2></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id='3d_data_point_x'></td>
+                        <td colspan="2" id='3d_data_point_y'></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Dist</h2></td>
+                        <td id='3D_dist_1'></td>
+                        <td id='3D_dist_2'></td>
+                        <td id='3D_dist_3'></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><h1>Points (2D)</h1></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h2>X</h2></td>
+                        <td colspan="2"><h2>Y</h2></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id='2d_data_point_x'></td>
+                        <td colspan="2" id='2d_data_point_y'></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Dist</h2></td>
+                        <td id='2D_dist_1'></td>
+                        <td id='2D_dist_2'></td>
+                        <td id='2D_dist_3'></td>
+                    </tr>
+                </table>
+            </div>
+            <canvas class="col-5 DisplayCanvas" height="890" width="860"  id="2DCanvas">
+            </canvas>
+            <div class="col-5 DisplayCanvas" id="3DCanvas">
+            </div>
+        <div>
+		<div class="row Section_Separator"></div>
+		<div class="row Section_Footer">
+			<div class="col-12 ">
+				<p>Copyright &#9400; 2017 Omega Analytic Systems Ltd. All Rights Reserved. See <a href='#'>Disclaimer</a>.</p>
+			</div>
+		</div>
+	</div>
+	</body>
+		<script src="js/Three.js"></script>
+        <script src="js/OrbitControls.js"></script>
+        <script src="js/circle-intersection.js"></script>
+		<script src="js/loc.js"></script>
+        <script>
+            function openMainNav() {
+                document.getElementById("Nav_Main").style.marginLeft = "0px";
+                document.getElementById("Nav_Container").style.filter = "grayscale(100%) blur(3px)";
+            }
+            function closeMainNav() {
+                document.getElementById("Nav_Main").style.marginLeft = "-253px";
+                document.getElementById("Nav_Portfolio").style.marginLeft = "-253px";
+                document.getElementById("Nav_Container").style.filter = "grayscale(0) blur(0)";
+                document.getElementById("Nav_Container").style.transform = "translateZ(0)";
+                document.getElementById("Nav_Container").style.height = "100%";
+            }
+            function openPortfolioNav(){
+                document.getElementById("Nav_Portfolio").style.marginLeft = "250px";
+            }
+            function closePortfolioNav(){
+                document.getElementById("Nav_Portfolio").style.marginLeft = "-253px";
+            }
+        </script>
+        <script>
+            var Start_showPage;
+            var Start_main;
+            function load() {
+                Start_showPage = setTimeout(showPage, 3000);
+                Start_showPage = setTimeout(startTime, 3000);
+                Start_showPage = setTimeout(start, 5000);
+            }
+            function showPage() {
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("Loading_Image").style.display = "none";
+                var elems = document.getElementsByClassName('row');
+                for (var i=0;i<elems.length;i+=1){
+                    elems[i].style.display = 'block';
+                }
+            }
+            //Recurring Function (60 seconds)
+            function startTime() {
+                var today = new Date();
+                var hours = today.getHours();
+                var minutes = today.getMinutes();
+                minutes = minutes < 10 ? '0'+minutes : minutes;
+                //Display time in hh:ss AM-PM format 
+                document.getElementById('clock_HM').innerHTML = hours + ':' + minutes; 
+                //Restart 60 seconds later
+                var restartTime = setTimeout(startTime, 60000);
+            }
+        </script>
+        <script>        
+            
+        </script>
+</html>
